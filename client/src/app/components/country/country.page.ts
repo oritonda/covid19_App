@@ -3,11 +3,11 @@ import { Country } from 'src/app/interface/country';
 import { APIService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'app-popover',
-  templateUrl: './popover.component.html',
-  styleUrls: ['./popover.component.scss'],
+  selector: 'app-country',
+  templateUrl: './country.page.html',
+  styleUrls: ['./country.page.scss'],
 })
-export class PopoverComponent implements OnInit {
+export class CountryPage implements OnInit {
 // country
 countries:Country
   constructor(private api:APIService, ) { }
@@ -23,5 +23,4 @@ countries:Country
       console.log(this.countries)
     })
   }
-
 }

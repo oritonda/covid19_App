@@ -1,7 +1,8 @@
+import { CountryPage } from './../components/country/country.page';
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
-import {PopoverComponent} from '../components/popover/popover.component'
+
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomePage implements OnInit {
   async presentPopover(ev: any) {
     console.log(ev)
     const popover = await this.popoverController.create({
-      component: PopoverComponent,
+      component: CountryPage,
       cssClass: 'my-custom-class',
       event: ev,
       translucent: true
