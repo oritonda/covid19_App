@@ -1,3 +1,4 @@
+import { APIService } from 'src/app/services/api.service';
 import { CountryPage } from './../components/country/country.page';
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
@@ -10,9 +11,13 @@ import { PopoverController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  
-  constructor(private popoverController: PopoverController) {}
-  ngOnInit(): void {}
+  countries :any
+  global:any = []
+ 
+  constructor(private popoverController: PopoverController, private API :APIService) {}
+  ngOnInit(): void {
+    this.country()
+  }
 
   async presentPopover(ev: any) {
     console.log(ev)
@@ -28,7 +33,14 @@ export class HomePage implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  
+  country()
+  {
+    this.API.getStats().subscribe((data:any)=>{
+      
+      this.global = data.Global
+      console.log(this.global)
+    })
+  }
 }
 
 

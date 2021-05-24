@@ -1,13 +1,110 @@
-<ion-header class="ion-no-border" [translucent]="true">
+<ion-header color="primary" class="ion-no-border" [translucent]="true">
   <ion-toolbar >
+   <!-- <div class="head">
     <ion-chip (click)="presentPopover($event)" >
       <ion-icon size="small" name="chevron-down-outline"></ion-icon>
     </ion-chip>
+
+    <ion-list>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="brown">select country</ion-select-option>
+          <ion-select-option  *ngFor="let country of countries" >{{country.name}}</ion-select-option>
+        </ion-select>
+    </ion-list>
+
+    <ion-chip (click)="presentPopover($event)" >
+      <ion-icon size="small" name="chevron-down-outline"></ion-icon>
+    </ion-chip>
+
+   </div> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <span><div class="head"> 
+    <ion-text>View country stats</ion-text>
+     <ion-chip >
+      <ion-icon size="small" name="chevron-forward-outline"></ion-icon>
+    </ion-chip>
+
+  </div></span>
+  <span>
+    <div class="stats">
+      <ion-text>Global Stats</ion-text>
+    </div>
+    
+  </span>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Stopcovid19.svg" alt="">
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid *ngIf="global">
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-card class="first">
+            <ion-card-header>
+              <ion-card-subtitle color="light">Confirmed</ion-card-subtitle>
+              <ion-card-subtitle color="light">{{global.TotalConfirmed}}</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card class="second">
+            <ion-card-header>
+              <ion-card-subtitle color="light">Death</ion-card-subtitle>
+              <ion-card-subtitle color="light">{{global.TotalDeaths}}</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div><ion-card class="third">
+          <ion-card-header>
+            <ion-card-subtitle color="light">Recovered</ion-card-subtitle>
+            <ion-card-subtitle color="light">{{global.TotalRecovered}}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+          </ion-card-content>
+        </ion-card>
+      </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card class="forth">
+            <ion-card-header>
+              <ion-card-subtitle color="light">Recovered</ion-card-subtitle>
+              <ion-card-subtitle color="light">{{global.NewRecovered}}</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
-
-
 

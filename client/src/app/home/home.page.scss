@@ -1,25 +1,75 @@
-ion-chip{
-    width: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-end;
-    justify-content: center;
-    background:#018DDF;
+ion-chip {
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background: #41C88E;
 }
-ion-icon{
-    width: 0.8rem;
-    height: 0.8rem;
-    color: white;
+ion-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: white;
 }
-ion-card{
-    background:#018DDF;
-    border-radius: 1.5rem;
-    height: 10rem;
-    color: white;
+ion-card {
+  background: #41C88E;
+  border-radius: 1.5rem;
+  height: 9rem;
+  color: white;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  
 }
 ion-card-title {
-    color: white;   
+  color: white;
 }
-img{
-    width: 4rem;
+img {
+  width: 8rem;
 }
+.empty {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head {
+  width: auto;
+  display: flex;
+  align-items: center;
+//   margin: 0.41rem;
+    padding-left: 16px;
+  justify-content: space-between;
+}
+
+ion-select::part(icon) {
+    display: none !important;
+   }
+
+ion-col{
+    ion-card{
+        margin: 0;
+        height: 6rem;
+        width: auto;
+
+    }
+}
+
+.first{
+    background: #75B9F2;
+}
+.second{
+    background: #F35453; 
+}
+.third{
+ background: palevioletred;
+}
+.forth{
+    background: #FFB656;
+}
+
+.stats{
+    padding-left: 16px;
+    padding-bottom: 5px;
+}
+

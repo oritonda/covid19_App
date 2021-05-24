@@ -1,6 +1,6 @@
 <ion-content>
-  <ion-list ng *ngFor="let country of countries">
-    <ion-item button lines="none">{{country.name}}</ion-item>
+  <ion-list *ngFor="let countryData of countries">
+    <ion-item button (click)="country(countryData.name)" lines="none">{{countryData.name}}</ion-item>
   </ion-list>
   
 </ion-content>

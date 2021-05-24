@@ -1,3 +1,4 @@
+import { Country } from './../interface/country';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -5,6 +6,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class APIService {
+
+  countryData:any
 
   constructor(private http:HttpClient) { }
   // fuction to get countries
@@ -14,8 +17,8 @@ export class APIService {
 
   }
   // function to get stats by coutry
-  getStats(code:string)
+  getStats()
   {
-    return this.http.get(`https://restcountries.eu/rest/v2/alpha/${code}`)
+    return  this.http.get(`https://api.covid19api.com/summary`)
   }
 }
