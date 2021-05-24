@@ -1,9 +1,9 @@
 <ion-header color="primary" class="ion-no-border" [translucent]="true">
   <ion-toolbar >
    <div class="head">
-    <ion-chip (click)="presentPopover($event)" >
+    <!-- <ion-chip (click)="presentPopover($event)" >
       <ion-icon size="small" name="chevron-down-outline"></ion-icon>
-    </ion-chip>
+    </ion-chip> -->
 
     <!-- <ion-list>
         <ion-select value="brown" okText="Okay" cancelText="Dismiss">
@@ -21,8 +21,8 @@
 
   <span><div class="head"> 
     <ion-text>View country stats</ion-text>
-     <ion-chip >
-      <ion-icon size="small" name="chevron-forward-outline"></ion-icon>
+    <ion-chip (click)="presentPopover($event)" >
+      <ion-icon size="small" name="chevron-down-outline"></ion-icon>
     </ion-chip>
 
   </div></span>
